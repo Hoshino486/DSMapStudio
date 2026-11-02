@@ -1,4 +1,4 @@
-﻿using static Andre.Native.ImGuiBindings;
+using static Andre.Native.ImGuiBindings;
 using Silk.NET.OpenGL;
 using System;
 using System.Collections.Generic;
@@ -99,6 +99,12 @@ public unsafe class OpenGLImGuiRenderer : IImguiRenderer
 
     public void OnSetupDone()
     {
+        // The atlas has to exist before the first NewFrame(): ImGui asserts that the default
+        // font is loaded and dereferences it unconditionally in release builds. The Vulkan
+        // renderer builds its atlas inside CreateDeviceResources(); this backend had no
+        // equivalent step, so OpenGLCompatGraphicsContext crashed on startup in NewFrame().
+        RecreateFontDeviceTexture();
+
         ImGui.NewFrame();
         _frameBegun = true;
     }
