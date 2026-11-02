@@ -1,7 +1,6 @@
 using StudioCore.Platform;
 using StudioCore.Scene;
-using System;
-using System.Collections.Generic;
+using System;using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Numerics;
@@ -340,13 +339,34 @@ public class CFG
         {
             lock (_lock_SaveLoadCFG)
             {
-                if (!Directory.Exists(GetConfigFolderPath()))
+                // A save must never be fatal. It runs from the constructor and from every settings
+                // change, so an unwritable profile directory (roaming profile, sandboxed launch,
+                // antivirus holding the file) used to prevent the application from starting at all.
+                // Losing the settings write is recoverable; refusing to launch is not.
+                try
                 {
-                    Directory.CreateDirectory(GetConfigFolderPath());
+                    if (!Directory.Exists(GetConfigFolderPath()))
+                    {
+                        Directory.CreateDirectory(GetConfigFolderPath());
+                    }
+
+                    SaveConfig();
+                }
+                catch (Exception e)
+                {
+                    TaskLogs.AddLog("Settings could not be saved",
+                        Microsoft.Extensions.Logging.LogLevel.Warning, TaskLogs.LogPriority.Low, e);
                 }
 
-                SaveConfig();
-                SaveKeybinds();
+                try
+                {
+                    SaveKeybinds();
+                }
+                catch (Exception e)
+                {
+                    TaskLogs.AddLog("Keybinds could not be saved",
+                        Microsoft.Extensions.Logging.LogLevel.Warning, TaskLogs.LogPriority.Low, e);
+                }
             }
         }
     }

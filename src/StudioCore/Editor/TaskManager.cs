@@ -144,7 +144,18 @@ public class TaskManager
             {
                 if (oldLiveTask.RequeueBehavior == RequeueType.WaitThenRequeue)
                 {
-                    oldLiveTask.Task.Wait();
+                    // Wait() rethrows whatever the previous run failed with, and this call runs on
+                    // the UI thread. Without this guard a single failed background task becomes an
+                    // unhandled exception and closes the application.
+                    try
+                    {
+                        oldLiveTask.Task.Wait();
+                    }
+                    catch (Exception e)
+                    {
+                        TaskLogs.AddLog(Localization.Loc.T("Task Failed: {TaskId}", "TaskId", TaskId),
+                            LogLevel.Error, LogPriority, e.InnerException ?? e);
+                    }
                 }
                 else if (oldLiveTask.RequeueBehavior == RequeueType.Repeat)
                 {

@@ -1,4 +1,4 @@
-﻿using Andre.Formats;
+using Andre.Formats;
 using Microsoft.Extensions.Logging;
 using Octokit;
 using SoulsFormats;
@@ -725,7 +725,7 @@ public class ParamBank
             List<(string, PARAMDEF)> defPairs = LoadParamdefs();
             IsDefsLoaded = true;
             TaskManager.Run(new TaskManager.LiveTask("Param - Load Meta",
-                TaskManager.RequeueType.WaitThenRequeue, false, () =>
+                TaskManager.RequeueType.WaitThenRequeue, true, () =>
                 {
                     LoadParamMeta(defPairs);
                     IsMetaLoaded = true;
@@ -787,17 +787,17 @@ public class ParamBank
         UICache.ClearCaches();
 
         TaskManager.Run(new TaskManager.LiveTask("Param - Load Params", TaskManager.RequeueType.WaitThenRequeue,
-            false, () =>
+            true, () =>
             {
                 PrimaryBank.LoadParams();
 
                 TaskManager.Run(new TaskManager.LiveTask("Param - Load Vanilla Params",
-                    TaskManager.RequeueType.WaitThenRequeue, false, () =>
+                    TaskManager.RequeueType.WaitThenRequeue, true, () =>
                     {
                         VanillaBank.LoadParams();
 
                         TaskManager.Run(new TaskManager.LiveTask("Param - Check Differences",
-                            TaskManager.RequeueType.WaitThenRequeue, false,
+                            TaskManager.RequeueType.WaitThenRequeue, true,
                             () => RefreshAllParamDiffCaches(true)));
                         UICache.ClearCaches();
                     }));
