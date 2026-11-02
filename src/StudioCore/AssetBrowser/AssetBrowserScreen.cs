@@ -215,7 +215,7 @@ public class AssetBrowserScreen
         ImGui.PushStyleColorVec4(ImGuiCol.Text, new Vector4(0.9f, 0.9f, 0.9f, 1.0f));
         ImGui.SetNextWindowSize(new Vector2(300.0f, 200.0f) * scale, ImGuiCond.FirstUseEver);
 
-        if (ImGui.Begin($@"Asset Browser: Category##{SourceType}AssetBrowser_CategoryList"))
+        if (ImGui.Begin($@"Asset Browser: Category###Asset Browser: Category##{SourceType}AssetBrowser_CategoryList"))
         {
             ImGui.Separator();
             ImguiUtils.WrappedText("Categories:");
@@ -230,7 +230,7 @@ public class AssetBrowserScreen
         ImGui.PushStyleColorVec4(ImGuiCol.Text, new Vector4(0.9f, 0.9f, 0.9f, 1.0f));
         ImGui.SetNextWindowSize(new Vector2(300.0f, 200.0f) * scale, ImGuiCond.FirstUseEver);
 
-        if (ImGui.Begin($@"Asset Browser: Contents##{SourceType}AssetBrowser_ContentList"))
+        if (ImGui.Begin($@"Asset Browser: Contents###Asset Browser: Contents##{SourceType}AssetBrowser_ContentList"))
         {
             DisplayTopSection();
 
@@ -250,7 +250,7 @@ public class AssetBrowserScreen
         ImGui.PushStyleColorVec4(ImGuiCol.Text, new Vector4(0.9f, 0.9f, 0.9f, 1.0f));
         ImGui.SetNextWindowSize(new Vector2(300.0f, 200.0f) * scale, ImGuiCond.FirstUseEver);
 
-        if (ImGui.Begin($@"Asset Browser: Actions##{SourceType}AssetBrowser_CategoryList"))
+        if (ImGui.Begin($@"Asset Browser: Actions###Asset Browser: Actions##{SourceType}AssetBrowser_CategoryList"))
         {
             ImGui.Indent(10.0f);
 

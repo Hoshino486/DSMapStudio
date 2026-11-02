@@ -1,0 +1,23 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "Param",
+    "Tags": [
+        "Term"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "指游戏 Param，它决定了许多以整数为键的游戏对象与机制的行为和属性。"
+    ]
+}

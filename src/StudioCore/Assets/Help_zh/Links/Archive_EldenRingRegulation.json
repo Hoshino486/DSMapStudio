@@ -1,0 +1,25 @@
+{
+    "ProjectType": 8,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "档案：ER 规则文件",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/www.nexusmods.com/eldenring/mods/4262/@ER Regulations]",
+        "[Header]说明",
+        "收录艾尔登法环全部规则文件（regulation）的档案。想把旧版本的 param 升级到最新版本时，就需要它。"
+    ]
+}

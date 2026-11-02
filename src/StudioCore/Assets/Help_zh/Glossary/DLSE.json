@@ -1,0 +1,27 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "DLSE",
+    "Tags": [
+        "Format",
+        "DS2",
+        "DES"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "通用序列化格式。",
+        "在《恶魔之魂》中用于 FFX 与 ESD。",
+        "在《黑暗之魂 II》中用于 FFX。"
+    ]
+}

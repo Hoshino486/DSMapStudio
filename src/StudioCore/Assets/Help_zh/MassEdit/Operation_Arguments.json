@@ -1,0 +1,61 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "操作参数",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]self",
+        "给出当前选中值的值。",
+        "[Header]field <field>",
+        "给出当前选中的行与 Param 中指定单元格/字段的值。",
+        "[Header]vanilla",
+        "给出当前选中的单元格/字段、行与 Param 在原生 regulation 或 parambnd 中等价单元格/字段的值。若某行没有原生等价行，则失败。",
+        "[Header]aux <parambank>",
+        "给出当前选中的单元格/字段、行与 Param 在指定的 regulation 或 parambnd 中等价单元格/字段的值。若某行没有 aux 等价行，则失败。",
+        "可考虑使用 && !added",
+        "[Header]vanillafield <field>",
+        "给出当前选中的单元格/字段、行与 Param 在原生 regulation 或 parambnd 中指定单元格/字段的值。若某行没有原生等价行，则失败。",
+        "可考虑使用 && !added",
+        "[Header]auxfield <parambank> <field>",
+        "给出当前选中的单元格/字段、行与 Param 在 aux 的 regulation 或 parambnd 中指定单元格/字段的值。若某行没有 aux 等价行，则失败。",
+        "可考虑使用 && !added",
+        "[Header]paramlookup <param> <row> <field>",
+        "返回由精确指定的 Param、行与字段所确定的具体值。",
+        "[Header]average <field> <row selector>",
+        "给出当前选中的 Param 中、使用给定选择器找到的单元格/字段的平均值。",
+        "[Header]median <field> <row selector>",
+        "给出当前选中的 Param 中、使用给定选择器找到的单元格/字段的中位数。",
+        "[Header]mode <field> <row selector>",
+        "给出当前选中的 Param 中、使用给定选择器找到的单元格/字段的众数。",
+        "[Header]min <field> <row selector>",
+        "给出当前选中的 Param 中、使用给定选择器找到的单元格/字段的最小值。",
+        "[Header]max <field> <row selector>",
+        "给出当前选中的 Param 中、使用给定选择器找到的单元格/字段的最大值。",
+        "[Header]random <min> <max>",
+        "为每个选中的值给出一个位于给定值之间的随机小数。最小值和最大值均包含在内。",
+        "[Header]randint <min> <max>",
+        "为每个选中的值给出一个位于给定值之间的随机整数。最小值和最大值均包含在内。",
+        "[Header]randFrom <param> <field> <row selector>",
+        "为每个选中的值，从使用给定 Param、行选择器与字段找到的单元格/字段中随机给出一个值。",
+        "[Header]paramIndex",
+        "为当前选中的 Param 给出一个整数，从 0 开始，每选中一个 Param 递增 1。",
+        "[Header]rowIndex",
+        "为当前选中的行给出一个整数，从 0 开始，每选中一行递增 1。",
+        "[Header]fieldIndex",
+        "为当前选中的字段给出一个整数，从 0 开始，每选中一个字段递增 1。",
+        ""
+    ]
+}

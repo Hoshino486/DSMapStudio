@@ -1,0 +1,26 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "Bullet",
+    "Tags": [
+        "Term",
+        "Projectile"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "Bullet 是游戏内的飞行物，命中时可造成一定伤害和/或效果。",
+        "多数情况下 Bullet 用于常规弹道用途，但也有特殊例子，例如《只狼》中的“危”字符号。",
+        "Bullet 通常通过 behavior 在 TAE 中触发，也可通过 SpEffect 与 EMEVD 触发。"
+    ]
+}

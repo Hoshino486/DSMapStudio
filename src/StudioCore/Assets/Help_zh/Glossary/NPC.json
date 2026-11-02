@@ -1,0 +1,23 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "NPC",
+    "Tags": [
+        "Term"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "NPC 是 non-player character 的缩写，用于指代玩家自身以外的所有角色。"
+    ]
+}

@@ -41,7 +41,7 @@ public class NavmeshEditor
 
     public unsafe void OnGui(GameType game)
     {
-        if (ImGui.Begin("Navmesh Build"))
+        if (ImGui.Begin("Navmesh Build###Navmesh Build"))
         {
             if (game != GameType.DarkSoulsIII)
             {

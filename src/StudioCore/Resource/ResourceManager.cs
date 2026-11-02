@@ -394,7 +394,7 @@ public static class ResourceManager
         {
             ImGui.SetNextWindowSize(new Vector2(400, 310) * scale);
             ImGui.SetNextWindowPos(new Vector2(w - (100 * scale), h - (300 * scale)));
-            if (!ImGui.Begin("Resource Loading Tasks", ref TaskWindowOpen, ImGuiWindowFlags.NoDecoration))
+            if (!ImGui.Begin("Resource Loading Tasks###Resource Loading Tasks", ref TaskWindowOpen, ImGuiWindowFlags.NoDecoration))
             {
                 ImGui.End();
                 return;
@@ -424,7 +424,7 @@ public static class ResourceManager
 
     public static unsafe void OnGuiDrawResourceList()
     {
-        if (!ImGui.Begin("Resource List"))
+        if (!ImGui.Begin("Resource List###Resource List"))
         {
             ImGui.End();
             return;

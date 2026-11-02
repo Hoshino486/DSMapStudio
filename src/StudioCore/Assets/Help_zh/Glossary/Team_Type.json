@@ -1,0 +1,26 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "Team Type",
+    "Tags": [
+        "Term"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "定义角色（在 NPC 与多人游玩中）的阵营，包括其 AI 会攻击谁、能伤害谁、会被谁伤害。",
+        "",
+        "这一点在各作中不同。",
+        "参考现有的 NPC Param，为新 NPC 选定合适的 Team Type。"
+    ]
+}

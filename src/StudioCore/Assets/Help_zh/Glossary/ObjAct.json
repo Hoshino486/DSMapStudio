@@ -1,0 +1,26 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "ObjAct",
+    "Tags": [
+        "Term",
+        "Object",
+        "Action"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "Object Action（ObjAct）是基于玩家交互的对象状态容器。",
+        "例如，ObjAct 条目用于跟踪门的开启与拉杆的使用。"
+    ]
+}

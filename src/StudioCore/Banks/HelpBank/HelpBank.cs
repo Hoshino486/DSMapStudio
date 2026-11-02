@@ -1,4 +1,4 @@
-﻿using StudioCore.Help;
+using StudioCore.Help;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,6 +19,15 @@ public class HelpBank
 
     public HelpBank()
     {
+        Reload();
+    }
+
+    /// <summary>
+    ///     (Re)load every help section for the active UI language. Chinese reads Assets\Help_zh,
+    ///     English reads Assets\Help; both trees have the same file names and layout.
+    /// </summary>
+    public void Reload()
+    {
         _helpArticles = LoadHelpResource("Articles");
         _helpTutorials = LoadHelpResource("Tutorials");
         _helpGlossary = LoadHelpResource("Glossary");
@@ -28,12 +37,25 @@ public class HelpBank
         _helpCredits = LoadHelpResource("Credits");
     }
 
+    /// <summary>Root folder holding the help tree for the active language.</summary>
+    private static string HelpRoot =>
+        Localization.Loc.IsEnglish ? "Help" : "Help_zh";
+
     private List<HelpEntry> LoadHelpResource(string directory)
     {
         List<HelpEntry> helpEntries = new();
 
+        var folder = AppContext.BaseDirectory + $@"\Assets\{HelpRoot}\{directory}\";
+        if (!Directory.Exists(folder))
+        {
+            // Fall back to the English tree so a missing translation never blanks the help window.
+            folder = AppContext.BaseDirectory + $@"\Assets\Help\{directory}\";
+        }
+        if (!Directory.Exists(folder))
+            return helpEntries;
+
         IEnumerable<string> articleDirFiles =
-            from file in Directory.EnumerateFiles(AppContext.BaseDirectory + $@"\Assets\Help\{directory}\")
+            from file in Directory.EnumerateFiles(folder)
             select file;
         foreach (var file in articleDirFiles)
             helpEntries.Add(LoadHelpJSON(file));

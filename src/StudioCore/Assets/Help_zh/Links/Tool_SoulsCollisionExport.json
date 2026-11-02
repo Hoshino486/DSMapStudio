@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：SoulsCollisionExport",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/vawser/ServerNameTools/tree/main/SoulsCollisionExport@Souls Collision Export]",
+        "[Header]说明",
+        "一个个人版的 DSMapStudio。DSMapStudio 是面向现代 FromSoft 游戏的独立一体化模改工具，涵盖恶魔之魂（PS3）、黑暗之魂系列、血源诅咒、只狼、艾尔登法环和装甲核心 VI。它目前包含地图编辑器、游戏 param 编辑器和用于编辑游戏内文本的文本编辑器。"
+    ]
+}

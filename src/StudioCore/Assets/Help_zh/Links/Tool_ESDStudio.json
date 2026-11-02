@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：ESD Studio",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/GompDS/ESDStudio@ESD Studio]",
+        "[Header]说明",
+        "一个桌面应用，让你在一个地方编辑全部的 Talk ESD 文件！"
+    ]
+}

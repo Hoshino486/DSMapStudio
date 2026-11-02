@@ -1,0 +1,23 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "文本编辑器：概览",
+    "Tags": [
+        "Feature"
+    ],
+    "Contents": [
+        "[Header]信息",
+        "文本编辑器允许你编辑游戏所使用的本地化文本。"
+    ]
+}

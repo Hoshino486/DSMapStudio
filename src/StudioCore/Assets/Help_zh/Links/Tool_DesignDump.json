@@ -1,0 +1,25 @@
+{
+    "ProjectType": 9,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：Design Dump",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/drive.google.com/drive/folders/1rnjAJp184rImuXLYyRHUH83FKG82dfjl@Design Dump]",
+        "[Header]说明",
+        "一个极简的 CLI 工具，用来从《装甲核心 VI》的存档文件中导出 AC 机体配置。"
+    ]
+}

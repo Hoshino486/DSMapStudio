@@ -1,0 +1,26 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "State Info",
+    "Tags": [
+        "Term",
+        "StateInfo"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "一套按角色管理状态的系统，在《血源诅咒》《黑暗之魂 III》《只狼》与《艾尔登法环》中与 Havok behavior 文件配合，在《恶魔之魂》与《黑暗之魂 I》中则与 EzState 文件配合。",
+        "",
+        "在 Param/TAE 中被引用，用于在玩家或敌人身上触发状态；此时该 id 相当于一条特殊指令，让底层 behavior 处理程序按条件执行某些操作。"
+    ]
+}

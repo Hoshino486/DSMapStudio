@@ -1,0 +1,26 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：WitchyBND",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/ividyon/WitchyBND@WitchyBND]",
+        "[Header]说明",
+        "WitchyBND 是一款解包/重打包/序列化软件，面向 FromSoftware 自研引擎使用的常见文件格式，适用于恶魔之魂、黑暗之魂 1-3、血源诅咒、只狼、艾尔登法环和装甲核心 VI 等游戏。Witchy 支持 DCX、FFXBND、BND3、BND4、BXF3、BXF4、FFXDLSE、FMG、GPARAM、LUAGNL、LUAINFO、TPF、Zero3、FXR3、MATBIN、MTD、PARAM、MQB 和 ENTRYFILELIST 这些格式。",
+        "它是 Yabber 的后继者。Yabber 是 TKGP 制作的 FromSoftware 文件格式解包与序列化工具，WitchyBND 做了全面重写，增添了功能与易用性，并集成了社区的贡献。"
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "字段操作",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]= <value>",
+        "将指定值赋给选中的值。会尝试转换为该值的数据类型。",
+        "[Header]+ <value>",
+        "将数字加到选中的值上；若值的类型为文本，则改为追加文本。",
+        "[Header]- <value>",
+        "从选中的值中减去该数字。",
+        "[Header]* <value>",
+        "将选中的值乘以该数字。",
+        "[Header]/ <value>",
+        "将选中的值除以该数字。",
+        "[Header]% <value>",
+        "返回选中的值除以该数字后的余数。",
+        "[Header]scale <factor> <center>",
+        "将选中的值与中心值之差乘以系数值。",
+        "[Header]replace <search string> <replace string>",
+        "将选中的值视为文本，并把所有出现的待替换文本替换为新文本。",
+        "[Header]replacex <search string> <replace string>",
+        "将选中的值视为文本，并把给定正则表达式的所有出现替换为替换内容，支持正则分组。",
+        "[Header]max <value>",
+        "返回当前值与该数字中较大者。",
+        "[Header]min <value>",
+        "返回当前值与该数字中较小者。",
+        ""
+    ]
+}

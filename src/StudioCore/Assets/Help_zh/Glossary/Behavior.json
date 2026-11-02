@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "Behavior",
+    "Tags": [
+        "Term"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "在 Param 与 Time Action Events（TAE）中，behavior 数据与某个动作及其效果相关联，例如 speffect、精力消耗和各种状态变化。",
+        "",
+        "在 Havok Behavior 文件（HKX）中，behavior 数据负责管理角色的动画与状态切换。"
+    ]
+}

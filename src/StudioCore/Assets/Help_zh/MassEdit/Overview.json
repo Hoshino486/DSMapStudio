@@ -1,0 +1,37 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "概述",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]Information",
+        "Mass Edit 的存在是为了按一套简单的方案进行大批量编辑。",
+        "",
+        "一条基础的 Mass Edit 命令由三个选择器和一个操作组成：",
+        "[Highlight@1]: Param 选择",
+        "[Highlight@2]: 行选择",
+        "[Highlight@3]: 字段选择",
+        "[Highlight@4]: 字段值操作",
+        "更进阶的 Mass Edit 命令可以改为执行行操作：",
+        "[Highlight@1]: Param 选择",
+        "[Highlight@2]: 行选择",
+        "[Highlight@2]: 行操作",
+        "每一类别中的选择都可以通过使用 && 字符组合多个选择条件来更精确地控制。",
+        "行操作与字段操作可以使用操作参数，操作参数会返回一个随后可被操作的值。",
+        "变量可用于保存一个值。",
+        ""
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "地图编辑器：渲染组",
+    "Tags": [
+        "Feature"
+    ],
+    "Contents": [
+        "[Header]信息",
+        "游戏使用渲染组（Render Groups）来决定哪些内容该渲染、哪些不该渲染。",
+        "渲染组由 Disp Group（显示组）与 Draw Group（绘制组）组成。",
+        "当某个 Disp Group 处于激活状态时，使用该 Draw Group 的地图对象就会渲染。",
+        "如果某个地图对象使用了 CollisionName 字段，它就会从被引用的地图对象继承 Draw Group。",
+        "在使用「设置选择」/「获取选择」时，Smithbox 会定位到 CollisionName 的引用目标，而不是你实际的选择。",
+        "当角色站在某块碰撞体上时，会使用该碰撞体的 DispGroup 与 DrawGroup。",
+        "颜色表示选中的地图对象正在使用哪些 Render Group。",
+        "[Highlight@Red]：所选对象使用该 Disp Group。",
+        "[Highlight@Green]：所选对象使用该 Draw Group。",
+        "[Highlight@Yellow]：两者都使用。"
+    ]
+}

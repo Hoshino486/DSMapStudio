@@ -197,7 +197,7 @@ public static class TaskLogs
             ImGui.PushStyleColorVec4(ImGuiCol.TitleBg, new Vector4(0.1f, 0.1f, 0.1f, 1.0f));
             ImGui.PushStyleColorVec4(ImGuiCol.TitleBgActive, new Vector4(0.25f, 0.25f, 0.25f, 1.0f));
             ImGui.PushStyleColorVec4(ImGuiCol.ChildBg, new Vector4(0.1f, 0.1f, 0.1f, 0.98f));
-            if (ImGui.Begin("Logger##TaskLogger", ref _loggerWindowOpen, ImGuiWindowFlags.NoDocking))
+            if (ImGui.Begin("Logger###Logger##TaskLogger", ref _loggerWindowOpen, ImGuiWindowFlags.NoDocking))
             {
                 if (ImGui.Button("Clear##TaskLogger"))
                 {

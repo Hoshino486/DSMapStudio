@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：Flver Map Migrator",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/Shadowth117/FlverMapMigrator@Flver Map Migrator]",
+        "[Header]说明",
+        "受 Abyss1ne 之托制作的工具。它取出某张地图中带有 flver 的 bnd 包，改写其中的 flver 与 bnd 内的地图 ID，输出可直接用于另一张地图的文件。"
+    ]
+}

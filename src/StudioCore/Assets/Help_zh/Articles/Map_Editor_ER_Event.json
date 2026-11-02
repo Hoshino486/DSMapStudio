@@ -1,0 +1,50 @@
+{
+    "ProjectType": 8,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "地图编辑器：事件",
+    "Tags": [
+        "Feature"
+    ],
+    "Contents": [
+        "[Header]信息",
+        "事件地图对象控制地图内的各种属性或状态。",
+        "下面简要说明每种事件地图对象类型。",
+        "注意，并非所有类型都存在于所有游戏中。",
+        "[Header]Generator（生成器）",
+        "一组属性，用于决定一组相互链接的敌人在一组相互链接的 SpawnPoint 处的重生状态。",
+        "[Header]Navmesh（导航网格）",
+        "未知。",
+        "[Header]Mount（坐骑）",
+        "敌人骑手与其坐骑之间的链接。",
+        "[Header]ObjAct（物体交互）",
+        "一组属性，用于决定某个 Asset 或 Object 的交互状态。",
+        "多用于拉杆、升降机和宝箱。",
+        "[Header]Other（其他）",
+        "未知。",
+        "[Header]PatrolInfo（巡逻信息）",
+        "一组属性，用于决定某个链接敌人所使用的巡逻路线。",
+        "它本身链接到 Region 组内的各个 PatrolRoute 对象。",
+        "[Header]PlatoonInfo（排组信息）",
+        "一组属性，用于决定一个排组（platoon group）的编成，以及它的队形与速度。",
+        "[Header]PseudoMultiplayer（伪多人）",
+        "一组供敌人使用的属性，用于模拟在线入侵机制。",
+        "[Header]SignPool（标记池）",
+        "某个 Asset 与某个召唤池（Summoning Pool）区域之间的链接。",
+        "[Header]RetryPoint（重试点）",
+        "玛莉卡雕像与重试区域（retry Region）之间的链接。",
+        "[Header]Treasure（宝物）",
+        "某个 Asset 或 Object 与某个 ItemLot 之间的链接。",
+        ""
+    ]
+}

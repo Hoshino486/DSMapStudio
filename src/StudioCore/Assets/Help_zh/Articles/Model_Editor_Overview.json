@@ -1,0 +1,24 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "模型编辑器：概览",
+    "Tags": [
+        "Feature"
+    ],
+    "Contents": [
+        "[Header]信息",
+        "模型编辑器允许你查看游戏所使用的模型。",
+        "具体来说，它涵盖角色（Characters）、资产（Assets）或对象（Objects）、Part，以及 MapPiece。"
+    ]
+}

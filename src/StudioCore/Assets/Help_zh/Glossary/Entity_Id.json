@@ -1,0 +1,28 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "Entity Id",
+    "Tags": [
+        "Term"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "地图中任意对象、敌人、NPC、重生点、MapPiece、碰撞体、Region、ObjAct 等的数字标识。",
+        "并非所有实体都需要 entity id，单有 id 本身不会产生任何效果。",
+        "",
+        "entity id 通常在 EMEVD 或 Param 中被引用。",
+        "entity id 常以地图 id 作为前缀",
+        "例如，大树洞（m13_02_00_00）中的大多数 entity id 都是 132XXXX 这样的 7 位数字。"
+    ]
+}

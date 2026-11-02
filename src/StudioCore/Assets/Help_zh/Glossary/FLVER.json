@@ -1,0 +1,26 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "FLVER",
+    "Tags": [
+        "Format",
+        "Model"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "用于渲染数据的专有格式。",
+        "它定义网格、骨骼，以及对材质和贴图的引用。",
+        "可用自制工具与更适合 Blender/3ds Max 的 FBX 格式互转。"
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "DCX",
+    "Tags": [
+        "Format"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "大多数 souls 文件使用的压缩格式。",
+        "在《只狼》与《装甲核心 VI》中，压缩使用名为 Oodle 的外部库。",
+        "可用 WitchyBND 或 Yabber 等工具解包。"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "视口：摄像机控制",
+    "Tags": [
+        "Tip",
+        "Hint",
+        "Camera",
+        "Controls"
+    ],
+    "Contents": [
+        "[Header]信息",
+        "在视口上按住鼠标键会启用摄像机控制。",
+        "使用 WASD 移动。",
+        "使用右键旋转摄像机。",
+        "按住 Shift 临时加速，按住 Ctrl 临时减速。",
+        "滚动鼠标滚轮调整整体速度。"
+    ]
+}

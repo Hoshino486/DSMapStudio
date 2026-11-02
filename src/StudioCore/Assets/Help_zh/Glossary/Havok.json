@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "Havok",
+    "Tags": [
+        "Term"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "用于控制所有角色动画的 behavior 系统。",
+        "使用 HKX behavior 文件与 HKS Havok 脚本文件。",
+        "用于《黑暗之魂 3》《血源诅咒》与《只狼》。在《黑暗之魂 II》的过场动画中也有使用。"
+    ]
+}

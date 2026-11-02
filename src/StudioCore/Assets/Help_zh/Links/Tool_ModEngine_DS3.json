@@ -1,0 +1,25 @@
+{
+    "ProjectType": 5,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：Mod Engine",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/www.nexusmods.com/darksouls3/mods/332@Mod Engine]",
+        "[Header]说明",
+        "Mod Engine 是一款注入式 DLL 库，让游戏文件模改变得极其简单且稳妥。为了玩一个 mod 就动用 UXM 解包出好几 GB 游戏文件的日子过去了；只是想在游戏里随便玩玩却误连上网被封号的日子也过去了。"
+    ]
+}

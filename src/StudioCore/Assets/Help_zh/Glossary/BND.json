@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "BND",
+    "Tags": [
+        "Format",
+        "Binder"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "一种名为 Binder 的归档格式，用作众多游戏文件的容器。",
+        "可用 WitchBND 或 Yabber 等工具解包这些文件。"
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "SpEffect",
+    "Tags": [
+        "Term",
+        "Effect"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "一种状态，会使玩家或敌人产生玩法上或外观上的变化。",
+        "它可以是瞬时的、持续固定时长的，或永久的。",
+        "",
+        "Speffect 可由穿戴装备、使用物品、被攻击或 Bullet 命中、TAE、EMEVD 施加与清除。",
+        "",
+        "它们还可以带有图标，显示在 HP 条附近。",
+        "玩法上的变化可来自 SpEffect Param 中的各个字段。",
+        "许多重要的 speffect 还带有 StateInfo 参数。"
+    ]
+}

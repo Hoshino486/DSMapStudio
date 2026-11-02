@@ -1,0 +1,29 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "Dummy 多边形",
+    "Tags": [
+        "Format",
+        "DummyPoly",
+        "Dummy",
+        "Poly"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "模型内部预先定义的点。",
+        "带有数字 ID，用于在命中判定、视觉特效等众多场合引用该位置。",
+        "一个 dummy polygon 可以是模型上的单个位置，也可以是多个位置。",
+        "也可称作 DummyPoly、Dummy 或 Poly。"
+    ]
+}

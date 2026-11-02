@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -37,8 +37,26 @@ namespace DSMapStudio
             }
             catch
             {
-                mapStudio.AttemptSaveOnCrash();
-                mapStudio.CrashShutdown();
+                // Crash recovery must never replace the exception that caused the crash: it runs
+                // while the program is already in an undefined state.
+                try
+                {
+                    mapStudio.AttemptSaveOnCrash();
+                }
+                catch (Exception recoveryError)
+                {
+                    Console.WriteLine("Crash recovery failed: " + recoveryError);
+                }
+
+                try
+                {
+                    mapStudio.CrashShutdown();
+                }
+                catch (Exception shutdownError)
+                {
+                    Console.WriteLine("Crash shutdown failed: " + shutdownError);
+                }
+
                 // Throw to trigger CrashHandler
                 throw;
             }

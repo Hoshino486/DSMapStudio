@@ -1,0 +1,26 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "TAE",
+    "Tags": [
+        "Format"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "Time Action Events（TAE）是 .TAE 文件中包含的离散事件。",
+        "这些事件控制角色动画在特定帧内的诸多动画与状态表现。",
+        "按角色的 animation id 索引。",
+        ".TAE 文件可用 DSAnimStudio 工具编辑。"
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "Lua",
+    "Tags": [
+        "Format",
+        "Script"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "一种脚本语言，所有作品都用它编写角色与敌人的 AI。",
+        "在《黑暗之魂 III》《血源诅咒》《只狼》与《艾尔登法环》中，HKS 以 Lua 的特殊方言编写。"
+    ]
+}

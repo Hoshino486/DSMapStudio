@@ -86,7 +86,7 @@ public class ModelEditorScreen : EditorScreen, AssetBrowserEventHandler, SceneTr
         LoadModel(modelid, ModelEditorModelType.MapPiece, mapid);
     }
 
-    public string EditorName => "Model Editor";
+    public string EditorName => "Model Editor###Model Editor";
     public string CommandEndpoint => "model";
     public string SaveType => "Models";
 

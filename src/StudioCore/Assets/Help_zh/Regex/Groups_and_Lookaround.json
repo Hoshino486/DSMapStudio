@@ -1,0 +1,32 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "分组与环视",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header](abc)",
+        "捕获组。",
+        "[Header]\\1",
+        "对第一个捕获组的反向引用。",
+        "[Header](?:abc)",
+        "非捕获组。",
+        "[Header](?=abc)",
+        "正向先行断言。",
+        "[Header](?!abc)",
+        "负向先行断言。",
+        ""
+    ]
+}

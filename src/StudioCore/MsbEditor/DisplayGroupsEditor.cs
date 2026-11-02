@@ -46,7 +46,7 @@ public class DisplayGroupsEditor
             ImGui.SetNextWindowFocus();
         }
         ImGui.PushStyleVarVec2(ImGuiStyleVar.ItemSpacing, new Vector2(4.0f, 2.0f) * scale);
-        if (ImGui.Begin("Render Groups") && _scene != null)
+        if (ImGui.Begin("Render Groups###Render Groups") && _scene != null)
         {
             DrawGroup dg = _scene.DisplayGroup;
             if (dg.AlwaysVisible || dg.RenderGroups.Length != dispCount)

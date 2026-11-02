@@ -1,0 +1,27 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "GFX",
+    "Tags": [
+        "Format",
+        "UI",
+        "Interface"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "一种动画文件，以类似 .SWF 的格式存放矢量与位图图形。",
+        "",
+        "可用 JPEXS Flash Decompiler 等工具编辑这些文件。"
+    ]
+}

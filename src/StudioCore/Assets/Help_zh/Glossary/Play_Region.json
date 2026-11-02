@@ -1,0 +1,33 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "Play Region",
+    "Tags": [
+        "Term"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "MSB 中碰撞体的一项属性，定义玩家站在其上时会发生什么。",
+        "",
+        "有些 Region 允许 PvP 入侵者进入；有些允许放置召唤标记；还有些用于 Boss 战，会生成不稳定碰撞并阻止在场地内重载。",
+        "",
+        "多人游玩激活时，雾门通常被放在 Play Region 的边界上。",
+        "",
+        "从《血源诅咒》起这由 Param 处理，但《黑暗之魂 I》使用一套特殊约定：正的 Play Region id 表示 PvP/合作区域，",
+        "[Highlight@-1]：始终不稳定，",
+        "[Highlight@-2]：稳定且不允许入侵，",
+        "[Highlight@-10]：条件稳定的 Play Region，",
+        "具体取决于 ((region id)*-1 - 10) 处事件旗标的取值"
+    ]
+}

@@ -1,4 +1,4 @@
-﻿using Octokit;
+using Octokit;
 using StudioCore.Banks.HelpBank;
 using StudioCore.Help;
 using System.Collections.Generic;
@@ -56,6 +56,12 @@ public class HelpWindow
         _helpBank = new HelpBank();
     }
 
+    /// <summary>Reload the help tree for the active UI language.</summary>
+    public void ReloadHelpBank()
+    {
+        _helpBank?.Reload();
+    }
+
     public void ToggleMenuVisibility()
     {
         MenuOpenState = !MenuOpenState;
@@ -78,7 +84,7 @@ public class HelpWindow
         ImGui.PushStyleVarVec2(ImGuiStyleVar.ItemSpacing, new Vector2(20.0f, 10.0f) * scale);
         ImGui.PushStyleVarFloat(ImGuiStyleVar.IndentSpacing, 20.0f * scale);
 
-        if (ImGui.Begin("Help##Popup", ref MenuOpenState, ImGuiWindowFlags.NoDocking))
+        if (ImGui.Begin("Help###Help##Popup", ref MenuOpenState, ImGuiWindowFlags.NoDocking))
         {
             ImGui.BeginTabBar("#HelpMenuTabBar");
             ImGui.PushStyleColorVec4(ImGuiCol.Header, new Vector4(0.3f, 0.3f, 0.6f, 0.4f));

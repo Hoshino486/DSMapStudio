@@ -1,4 +1,4 @@
-﻿using Octokit;
+using Octokit;
 using SoulsFormats;
 using StudioCore.Editor;
 using System.Collections.Generic;
@@ -94,7 +94,10 @@ public class AssetLocator
 
     public string GetAssetPath(string relpath) => Locator.ActiveProject.AssetLocator.GetAssetPath(relpath);
 
-    public bool CreateRecoveryProject() => Locator.ActiveProject.CreateRecoveryProject() != null;
+    // A crash can happen before any project is loaded, in which case ActiveProject is null and
+    // the original exception must not be replaced by a NullReferenceException from the handler.
+    public bool CreateRecoveryProject() =>
+        Locator.ActiveProject != null && Locator.ActiveProject.CreateRecoveryProject() != null;
 
     /// <summary>
     ///     Gets the full list of maps in the game (excluding chalice dungeons). Basically if there's an msb for it,

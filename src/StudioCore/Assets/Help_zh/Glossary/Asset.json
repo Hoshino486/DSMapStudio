@@ -1,0 +1,28 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "Asset",
+    "Tags": [
+        "Term",
+        "Object"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "Asset 是地图中的静态实体，命名通常形如 AEG000500。",
+        "在特定条件下 Asset 会被破坏，具体由 asset Param 定义。",
+        "EMEVD 可用于启用或停用 Asset、播放动画，以及改变 ObjAct 未处理的状态。",
+        "",
+        "在《艾尔登法环》之前，Asset 被称为 Object。"
+    ]
+}

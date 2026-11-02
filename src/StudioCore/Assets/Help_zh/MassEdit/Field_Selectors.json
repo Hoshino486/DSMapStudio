@@ -1,0 +1,32 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "字段选择器",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]<field>",
+        "选择该字段内部名称匹配给定正则表达式的单元格/字段。",
+        "[Header]modified:",
+        "选择在原生 regulation 或 parambnd 中等价单元格值不同的单元格/字段。",
+        "[Header]auxmodified: <parambank>",
+        "选择在指定的 regulation 或 parambnd 中等价单元格值不同的单元格/字段。",
+        "[Header]sftype: <type>",
+        "选择字段数据类型（由 SoulsFormats 枚举）匹配给定正则表达式的单元格/字段。",
+        "[Header]vars: <string>",
+        "选择名称匹配给定正则表达式的变量。",
+        ""
+    ]
+}

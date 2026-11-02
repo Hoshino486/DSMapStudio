@@ -36,7 +36,7 @@ public unsafe class TextEditorScreen : EditorScreen
         _propEditor = new PropertyEditor(EditorActionManager);
     }
 
-    public string EditorName => "Text Editor";
+    public string EditorName => "Text Editor###Text Editor";
     public string CommandEndpoint => "text";
     public string SaveType => "Text";
 
@@ -529,7 +529,7 @@ public unsafe class TextEditorScreen : EditorScreen
         var dsid = ImGui.GetID("DockSpace_TextEntries");
         ImGui.DockSpace(dsid, new Vector2(0, 0), ImGuiDockNodeFlags.None, null);
 
-        ImGui.Begin("Text Categories");
+        ImGui.Begin("Text Categories###Text Categories");
         ImGui.Indent();
         ImGui.InputText("##SearchAllFmgsInput", ref _fmgSearchAllString, 255);
         ImGui.Unindent();
@@ -623,7 +623,7 @@ public unsafe class TextEditorScreen : EditorScreen
 
         ImGui.End();
 
-        ImGui.Begin("Text Entries");
+        ImGui.Begin("Text Entries###Text Entries");
         if (ImGui.Button("Clear Text"))
         {
             _searchFilter = "";
@@ -712,7 +712,7 @@ public unsafe class TextEditorScreen : EditorScreen
         ImGui.EndChild();
         ImGui.End();
 
-        ImGui.Begin("Text");
+        ImGui.Begin("Text###Text");
         if (_activeEntryGroup == null)
         {
             ImGui.Text("Select an item to edit text");

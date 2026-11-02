@@ -132,7 +132,7 @@ public unsafe class Viewport : IViewport
 
     public void OnGui()
     {
-        if (ImGui.Begin($@"Viewport##{_vpid}", ImGuiWindowFlags.NoBackground | ImGuiWindowFlags.NoNav))
+        if (ImGui.Begin($@"Viewport###Viewport##{_vpid}", ImGuiWindowFlags.NoBackground | ImGuiWindowFlags.NoNav))
         {
             if (!ViewportSelected)
             {
@@ -180,7 +180,7 @@ public unsafe class Viewport : IViewport
 
         ImGui.End();
 
-        if (ImGui.Begin($@"Profiling##{_vpid}"))
+        if (ImGui.Begin($@"Profiling###Profiling##{_vpid}"))
         {
             ImGui.Text($@"Cull time: {_renderScene.OctreeCullTime} ms");
             ImGui.Text($@"Work creation time: {_renderScene.CPUDrawTime} ms");

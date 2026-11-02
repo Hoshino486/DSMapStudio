@@ -933,7 +933,7 @@ public class SettingsMenu
         ImGui.PushStyleVarVec2(ImGuiStyleVar.ItemSpacing, new Vector2(20.0f, 10.0f) * scale);
         ImGui.PushStyleVarFloat(ImGuiStyleVar.IndentSpacing, 20.0f * scale);
 
-        if (ImGui.Begin("Settings Menu##Popup", ref MenuOpenState, ImGuiWindowFlags.NoDocking))
+        if (ImGui.Begin("Settings Menu###Settings Menu##Popup", ref MenuOpenState, ImGuiWindowFlags.NoDocking))
         {
             ImGui.BeginTabBar("#SettingsMenuTabBar");
             ImGui.PushStyleColorVec4(ImGuiCol.Header, new Vector4(0.3f, 0.3f, 0.6f, 0.4f));

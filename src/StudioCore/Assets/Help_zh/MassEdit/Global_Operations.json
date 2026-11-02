@@ -1,0 +1,28 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "全局操作",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]clear",
+        "清空剪贴板的 Param 与行。",
+        "[Header]newvar <name> <value>",
+        "创建一个变量，其值为给定值，类型为该值的类型。",
+        "[Header]clearvars",
+        "删除所有变量。",
+        ""
+    ]
+}

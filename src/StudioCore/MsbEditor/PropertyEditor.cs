@@ -1075,7 +1075,7 @@ public class PropertyEditor
         ImGui.PushStyleColorVec4(ImGuiCol.ChildBg, new Vector4(0.145f, 0.145f, 0.149f, 1.0f));
         ImGui.SetNextWindowSize(new Vector2(350, h - 80) * scale, ImGuiCond.FirstUseEver);
         ImGui.SetNextWindowPos(new Vector2(w - 370, 20) * scale, ImGuiCond.FirstUseEver, default);
-        ImGui.Begin($@"Properties##{id}");
+        ImGui.Begin($@"Properties###Properties##{id}");
         ImGui.BeginChild("propedit");
         if (entSelection.Count > 1)
         {

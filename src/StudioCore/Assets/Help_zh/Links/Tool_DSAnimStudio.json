@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：DS Anim Studio",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/Meowmaritus/DSAnimStudio@DS Anim Studio]",
+        "[Header]说明",
+        "编辑黑暗之魂、血源诅咒、黑暗之魂 3 和只狼的 TimeAct Editor 文件。这些文件掌控动画某一帧上发生的全部事件。"
+    ]
+}

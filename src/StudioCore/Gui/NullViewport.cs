@@ -36,7 +36,7 @@ public unsafe class NullViewport : IViewport
 
     public void OnGui()
     {
-        if (ImGui.Begin($@"Viewport##{_vpid}", ImGuiWindowFlags.NoBackground | ImGuiWindowFlags.NoNav))
+        if (ImGui.Begin($@"Viewport###Viewport##{_vpid}", ImGuiWindowFlags.NoBackground | ImGuiWindowFlags.NoNav))
         {
             Vector2 p = ImGui.GetWindowPos();
             Vector2 s = ImGui.GetWindowSize();
@@ -47,7 +47,7 @@ public unsafe class NullViewport : IViewport
 
         ImGui.End();
 
-        if (ImGui.Begin($@"Profiling##{_vpid}"))
+        if (ImGui.Begin($@"Profiling###Profiling##{_vpid}"))
         {
             ImGui.Text(@"Disabled...");
         }

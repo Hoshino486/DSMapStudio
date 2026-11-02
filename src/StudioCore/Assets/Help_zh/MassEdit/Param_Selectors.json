@@ -1,0 +1,34 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "Param 选择器",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]selection:",
+        "选择当前的 Param 选择以及该 Param 中已选中的行。",
+        "[Header]clipboard:",
+        "选择剪贴板所属的 Param 以及剪贴板中的行。",
+        "[Header]param:",
+        "选择名称匹配给定正则表达式的所有 Param。",
+        "[Header]modified:",
+        "选择存在与原生版本不一致的行、或存在新增行的 Param。忽略行名。",
+        "[Header]auxparam: <parambank>",
+        "从指定的 regulation 或 parambnd 中选择 Param 名称匹配给定正则表达式的 Param。",
+        "[Header]vars: <string>",
+        "选择名称匹配给定正则表达式的变量。",
+        ""
+    ]
+}

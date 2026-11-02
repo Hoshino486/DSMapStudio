@@ -1,0 +1,27 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：libER ELDEN RING API 库",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/Dasaav-dsv/libER@lib ER]",
+        "[Header]说明",
+        "libER 是一个 ELDEN RING 应用编程接口（API）库，借助不同版本 Microsoft Visual 编译器之间的二进制兼容性，为这款游戏提供一套安全的 C++ 接口。",
+        "ELDEN RING 的可执行文件是用 Visual Studio 2015 构建的，而这正是 Microsoft 保证此后所有编译器与标准库版本二进制兼容的最早版本。对 libER 来说，这意味着只要 libER 用 MSVC 或其他兼容编译器编译，ELDEN RING 里用到 C++ 标准库的地方，libER 也能照样使用。",
+        "能用上 STL，就享有标准库提供的保障，逆向与文档整理工作也随之轻松许多。选定 MSVC 标准库（哪怕只是因为 ELDEN RING 在用），意味着游戏拥有稳定的 ABI 与 API。这个选择有一定局限，却也为使用 libER 的项目定下了统一标准。"
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "参数编辑器：搜索",
+    "Tags": [
+        "Feature",
+        "Param"
+    ],
+    "Contents": [
+        "[Header]信息",
+        "参数编辑器的搜索栏使用 Regex，命令中由 ! 包围的词表示此处可以使用 Regex 表达式，而不是纯文本。",
+        "其余所有大写词都是该命令的参数。",
+        "Regex 搜索不区分大小写，搜索词可以出现在目标行的任意位置。",
+        "要指定精确匹配，请用 ^ 和 $ 把文本包围起来（例如 ^10$），或使用 range 变体。",
+        "可以用 && 分隔来给出多个选择器。",
+        "行选择通过以下任一方式完成：",
+        "   !VALUE!：选择 ID 匹配或名称匹配的行",
+        "   modified：选择相对于原版（vanilla）被修改过的行",
+        "   original：选择未被修改过的行",
+        "   id !VALUE!：选择 ID 匹配的行",
+        "   idrange MIN MAX：选择 ID 落在给定范围内的行",
+        "   name !NAME!：选择名称匹配的行",
+        "   prop FIELD !VALUE!：选择在给定字段上具有匹配值的行",
+        "   proprange FIELD MIN MAX：选择在给定字段上具有值的行",
+        "   且该值落在给定范围内",
+        "   propref FIELD !NAME!：选择对另一行存在引用的行",
+        "   且该被引用行的名称匹配。",
+        "[Header]示例",
+        "一次完整的搜索可能如下例所示：",
+        "id 10000",
+        "   这会搜索所有 id 中包含 10000 的行。",
+        "   包括 10000、1000010、210000",
+        "name Dagger",
+        "   这会搜索所有名称中包含 Dagger 的行。",
+        "   包括 Blood Dagger、Sharp daggers 和 daggerfall",
+        "propref originEquipWep0 Dagger",
+        "   这会搜索所有其字段 originEquipWep0 所引用的行",
+        "   名称中包含 Dagger 的行，遵循上面相同的规则。",
+        "name Dagger && idrange 10000 Infinity",
+        "   这会搜索所有名称中包含 Dagger",
+        "   且 id 大于 9999 的行）",
+        ""
+    ]
+}

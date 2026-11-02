@@ -585,8 +585,8 @@ public class SceneTree : IActionEventHandler
         }
 
         var titleString = _configuration == Configuration.MapEditor
-            ? $@"Map Object List##{_id}"
-            : $@"Model Hierarchy##{_id}";
+            ? $@"Map Object List###Map Object List##{_id}"
+            : $@"Model Hierarchy###Model Hierarchy##{_id}";
         if (ImGui.Begin(titleString))
         {
             if (_initiatedDragDrop)

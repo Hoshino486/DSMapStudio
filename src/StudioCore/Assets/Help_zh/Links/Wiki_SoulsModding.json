@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "Wiki：Souls Modding",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@http:/soulsmodding.wikidot.com/@Souls Modding Wiki]",
+        "[Header]说明",
+        "一个社区维基，汇集大量指南，讲解全部现代 FROMSOFT 游戏的模改做法。"
+    ]
+}

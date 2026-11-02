@@ -1,4 +1,4 @@
-﻿using static Andre.Native.ImGuiBindings;
+using static Andre.Native.ImGuiBindings;
 using Microsoft.Extensions.Logging;
 using SoulsFormats;
 using StudioCore.Editor;
@@ -320,7 +320,7 @@ public class MsbEditorScreen : EditorScreen, SceneTreeEventHandler
         }
     }
 
-    public string EditorName => "Map Editor";
+    public string EditorName => "Map Editor###Map Editor";
     public string CommandEndpoint => "map";
     public string SaveType => "Maps";
 
@@ -396,6 +396,11 @@ public class MsbEditorScreen : EditorScreen, SceneTreeEventHandler
 
     public void DrawEditorMenu()
     {
+        // The menu bar is drawn even with no project loaded, but everything below reads
+        // Locator.ActiveProject (game type, asset locator, param bank). Bail out first.
+        if (Locator.ActiveProject == null)
+            return;
+
         if (ImGui.BeginMenu("Edit"))
         {
             if (ImGui.MenuItem("Undo", KeyBindings.Current.Core_Undo.HintText, false,

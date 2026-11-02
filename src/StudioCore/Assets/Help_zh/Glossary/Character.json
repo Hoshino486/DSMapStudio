@@ -1,0 +1,29 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "角色",
+    "Tags": [
+        "Term",
+        "Chr",
+        "Human",
+        "Player"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "Character（也写作 Chr）指 Enemy 地图对象类型下的任意实体。",
+        "角色数据以多种格式存在于多个位置。",
+        "",
+        "包括模型、贴图、动画、behavior、AI、对话，以及直接归属该角色的部分 SFX/SE。"
+    ]
+}

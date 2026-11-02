@@ -1,0 +1,24 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "Draw Param",
+    "Tags": [
+        "Term"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "一种 Param，用于按地图配置渲染（色调、光照、阴影）。",
+        "同一地图的不同 draw Param 版本可用 EMEVD 切换启用。"
+    ]
+}

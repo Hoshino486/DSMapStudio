@@ -1,0 +1,30 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "定位符",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]^abc",
+        "字符串开头。",
+        "[Header]abc$",
+        "字符串结尾。",
+        "[Header]\\b",
+        "单词边界。",
+        "[Header]\\B",
+        "非单词边界。",
+        ""
+    ]
+}

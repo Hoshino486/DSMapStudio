@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：FLVER Editor",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/Pear0533/FLVER_Editor@FLVER Editor]",
+        "[Header]说明",
+        "FLVER Editor 2.0 是对原版 FLVER Editor 模型编辑工具的彻底重做，用于修改 FromSoftware 主线系列游戏的 FLVER 模型文件格式。"
+    ]
+}

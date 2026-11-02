@@ -1,4 +1,4 @@
-﻿using Andre.Formats;
+using Andre.Formats;
 using static Andre.Native.ImGuiBindings;
 using Microsoft.Extensions.Logging;
 using SoulsFormats;
@@ -222,12 +222,16 @@ public class ParamEditorScreen : EditorScreen
         ResetFMGDecorators();
     }
 
-    public string EditorName => "Param Editor";
+    public string EditorName => "Param Editor###Param Editor";
     public string CommandEndpoint => "param";
     public string SaveType => "Params";
 
     public void DrawEditorMenu()
     {
+        // The menu bar is drawn even with no project loaded; the param bank lives on the project.
+        if (Locator.ActiveProject == null)
+            return;
+
         // Menu Options
         if (ImGui.BeginMenu("Edit"))
         {

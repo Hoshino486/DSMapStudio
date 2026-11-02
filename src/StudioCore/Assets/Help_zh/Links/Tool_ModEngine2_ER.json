@@ -1,0 +1,25 @@
+{
+    "ProjectType": 8,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：Mod Engine 2",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/soulsmods/ModEngine2@Mod Engine 2]",
+        "[Header]说明",
+        "Mod Engine 2 是对 Mod Engine 的彻底重写。Mod Engine 是一款运行时打补丁与注入库，用于为 FROM Software 的魂系列游戏添加模改功能。"
+    ]
+}

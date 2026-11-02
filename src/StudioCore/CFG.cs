@@ -1,4 +1,4 @@
-﻿using StudioCore.Platform;
+using StudioCore.Platform;
 using StudioCore.Scene;
 using System;
 using System.Collections.Generic;
@@ -45,11 +45,14 @@ public class CFG
     public bool EnableTexturing = false;
 
     // Font settings
-    public bool FontChinese = false;
+    public bool FontChinese = true;
     public bool FontCyrillic = false;
     public bool FontKorean = false;
     public bool FontThai = false;
     public bool FontVietnamese = false;
+
+    /// <summary>UI language: "Chinese" (default) or "English".</summary>
+    public string Language = "Chinese";
 
     public bool AliasBank_EditorMode = false;
 
@@ -361,6 +364,7 @@ public class CFG
 
                 LoadConfig();
                 LoadKeybinds();
+                Localization.Loc.ApplyConfig();
             }
         }
     }

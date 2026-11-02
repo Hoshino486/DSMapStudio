@@ -1,4 +1,4 @@
-﻿using static Andre.Native.ImGuiBindings;
+using static Andre.Native.ImGuiBindings;
 using Microsoft.Extensions.Logging;
 using Octokit;
 using Silk.NET.SDL;
@@ -50,7 +50,11 @@ public class MapStudioNew
     private readonly HelpWindow HelpWindow;
 
     private readonly NewProjectOptions _newProjectOptions = new();
-    private readonly string _programTitle;
+    /// <summary>OS window caption prefix; the translated form comes from the shared table.</summary>
+    private const string TITLE_BASE = "Dark Souls Map Studio version";
+
+    /// <summary>Computed each time so a language switch updates the OS window caption.</summary>
+    private string _programTitle => Localization.Loc.T(TITLE_BASE) + $" {_version}";
     private readonly SettingsMenu _settingsMenu;
 
     private readonly SoapstoneService _soapstoneService;
@@ -81,11 +85,21 @@ public class MapStudioNew
     public unsafe MapStudioNew(IGraphicsContext context, string version)
     {
         _version = version;
-        _programTitle = $"Dark Souls Map Studio version {_version}";
 
         UIScaleChanged += (_, _) =>
         {
             FontRebuildRequest = true;
+        };
+
+        // Keep the OS caption and the help tree in step with the language selector.
+        Localization.Loc.LanguageChanged += (_, _) =>
+        {
+            FontRebuildRequest = true;
+            if (_context != null)
+                _context.Window.Title = _projectSettings == null
+                    ? _programTitle
+                    : $"{_programTitle}  -  {_projectSettings.ProjectName}";
+            HelpWindow?.ReloadHelpBank();
         };
 
         // Hack to make sure dialogs work before the main window is created
@@ -200,8 +214,11 @@ public class MapStudioNew
             ImFontConfig* cfg = ImFontConfigImFontConfig();
             cfg->MergeMode = true;
             cfg->GlyphMinAdvanceX = 7.0f;
-            cfg->OversampleH = 5;
-            cfg->OversampleV = 5;
+            // Chinese ranges are ~21k glyphs. At the 5x5 oversampling used for the Latin font the
+            // atlas cannot be packed in one texture and glyphs get dropped, which shows up as
+            // scattered blank characters. 1x1 keeps the whole CJK set resident.
+            cfg->OversampleH = 1;
+            cfg->OversampleV = 1;
 
             ImFontGlyphRangesBuilder* glyphRanges = ImFontGlyphRangesBuilderImFontGlyphRangesBuilder();
             ImFontGlyphRangesBuilderAddRanges(glyphRanges, ImFontAtlasGetGlyphRangesJapanese(fonts));
@@ -210,7 +227,10 @@ public class MapStudioNew
                 ImFontGlyphRangesBuilderAddChar(glyphRanges, c);
             }
 
-            if (CFG.Current.FontChinese)
+            // Simplifed Chinese needs the full CJK range: the Japanese range only covers the
+            // JIS X 0208 kanji set, so common simplified forms (显, 工, 这, 为) would rasterize
+            // to nothing. Chinese is the default UI language, so it is always included.
+            if (CFG.Current.FontChinese || Localization.Loc.IsChinese)
             {
                 ImFontGlyphRangesBuilderAddRanges(glyphRanges, ImFontAtlasGetGlyphRangesChineseFull(fonts));
             }

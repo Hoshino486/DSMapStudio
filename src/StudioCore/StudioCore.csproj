@@ -1,4 +1,4 @@
-﻿
+
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -421,6 +421,7 @@
     <None Update="Assets\GameOffsets\**" CopyToOutputDirectory="PreserveNewest" />
     <None Update="Assets\Upgrader\**" CopyToOutputDirectory="PreserveNewest" />
     <None Update="Assets\Help\**" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Assets\Help_zh\**" CopyToOutputDirectory="PreserveNewest" />
     <None Update="Assets\ModelAliases\**" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 

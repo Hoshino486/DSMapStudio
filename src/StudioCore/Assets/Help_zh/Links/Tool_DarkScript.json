@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：DarkScript",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/AinTunez/DarkScript3@DarkScript]",
+        "[Header]说明",
+        "面向 FromSoftware 的 EMEVD 格式的易用编辑器，具备高级语言与工程化功能。"
+    ]
+}

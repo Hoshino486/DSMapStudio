@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：DSMS",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/soulsmods/DSMapStudio@DSMS]",
+        "[Header]说明",
+        "面向艾尔登法环、只狼、黑暗之魂系列、血源诅咒和恶魔之魂（PS3）的模改工具套件。"
+    ]
+}

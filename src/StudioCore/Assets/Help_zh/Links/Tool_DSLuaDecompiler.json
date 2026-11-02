@@ -1,0 +1,27 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：DS Lua Decompiler",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/katalash/DSLuaDecompiler@DS Lua Decompiler]",
+        "[Header]说明",
+        "DSLuaDecompiler 是一款进阶的 Lua 反编译器，专为模改用途反编译各款 FromSoft 游戏中出现的 Lua 脚本。它把重心放在反编译的准确性上，最终目标是让每一款已发售的现代 FromSoft 游戏（包括黑暗之魂、血源诅咒、黑暗之魂 3、只狼、艾尔登法环和装甲核心 6）里的每一个脚本都得到完全一致的反编译结果。",
+        "该反编译器主要面向 Lua 5.0 与 HavokScript：前者用于几乎所有 FromSoft 游戏中的 AI 脚本，后者用于血源诅咒、黑暗之魂 3、只狼和艾尔登法环中的角色控制逻辑。",
+        "对其他 Lua 版本的支持目前基本不在规划之内，唯一例外是对 Lua 5.3 的早期支持，它用于实现《任天堂明星大乱斗 特别版》的 UI 逻辑。"
+    ]
+}

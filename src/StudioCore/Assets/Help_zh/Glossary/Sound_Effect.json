@@ -1,0 +1,27 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "音效",
+    "Tags": [
+        "Term",
+        "SE"
+    ],
+    "Contents": [
+        "[Header]含义",
+        "音效是通过 Param、TAE、region 等方式触发的声音。",
+        "也可称作 SE",
+        "",
+        "它的使用场合与视觉效果大量重合，通过数字 id 索引 FMOD Sample Bank（FSB）中的音源。"
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "Author": "[Highlight@Author]: Vawser",
+    "ProjectType": 8,
+    "Title": "基础：添加宝箱",
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Tags": [
+        "Tutorial",
+        "Elden Ring",
+        "ER"
+    ],
+    "Contents": [
+        "[Header]实现细节",
+        "< 与 > 符号之间的字母表示你需要根据地图 ID 用合适的数字替换这些字母。",
+        "XX 表示地图的头两位数字。对于 m60 地图，XX 为 10。",
+        "YY 表示地图的第二组两位数字",
+        "ZZ 表示地图的第三组两位数字",
+        "建议先复制一条现有条目再修改，而不是通过“创建”菜单新建条目。",
+        "[Highlight@Treasure]：设置宝物。",
+        "[Highlight@ObjAct]：处理宝箱交互。",
+        "[Highlight@Asset]：用于承载宝物的目标资源，通常是 AEG099_630，即宝箱模型。",
+        "",
+        "[Header]Treasure（宝物）",
+        "添加一个新的 Treasure 地图对象，并修改以下属性：",
+        "[Highlight@EventID]：该数字需要唯一。",
+        "[Highlight@PartName]：需要是宝箱所在 Collision 或 MapPiece 的名称。",
+        "[Highlight@TreasurePartName]：需要是宝箱 Asset 的名称，例如 AEG099_630_9000。",
+        "[Highlight@ItemLotID]：需要是你打算使用的 ItemLotParam_map 行 ID。",
+        "[Highlight@InChest]：需要为 1。",
+        "[Highlight@StartDisabled]：需要为 1。",
+        "",
+        "[Header]ObjAct（对象交互）",
+        "添加一个新的 ObjAct 地图对象，并修改以下属性：",
+        "[Highlight@EventID]：该数字需要唯一。",
+        "[Highlight@PartName]：需要是宝箱所在 Collision 或 MapPiece 的名称。",
+        "[Highlight@ObjActEntityID]：改为 <XXYY>3250。",
+        "[Highlight@ObjActPartName]：需要是宝箱 Asset 对象的名称。",
+        "[Highlight@ObjActID]：应为 200（这是默认的宝箱 ObjAct）",
+        "[Highlight@StateType]：需要为 5",
+        "[Highlight@EventFlag]：改为 <XXYY>8250",
+        "",
+        "[Header]Asset（资源）",
+        "添加一个新的 Asset 地图对象，并修改以下属性：",
+        "[Highlight@Name]：需要是唯一的名称。",
+        "[Highlight@UnkPartNames]：需要是 Asset 所在 Collision 的名称。",
+        "[Highlight@EntityID]：改为 <XXYY>1250",
+        ""
+    ]
+}

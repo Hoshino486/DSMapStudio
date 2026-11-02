@@ -1,0 +1,26 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：ESDLang",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/thefifthmatt/ESDLang@ESDLang]",
+        "[Header]说明",
+        "ESDLang 是一门高级语言，用于查看和编辑 ESD 脚本，主要用来理解 NPC 的任务与交互、对任务做大改，以及给篝火添加便利功能。它把 ESD 文件反编译成 Python 的一个子集。这些 Python 文件并不是可执行的 Python，只能重新编译回去。",
+        "支持 DS1、DS2、血源诅咒、DS3、只狼和艾尔登法环。游戏样本见 examples/ 目录。"
+    ]
+}

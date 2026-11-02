@@ -1,0 +1,26 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：Dark Souls Sound Inserter",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/www.nexusmods.com/darksouls/mods/1193@Dark Souls Sound Inserter]",
+        "[Header]说明",
+        "模改工具。用于把游戏内的音效和音乐替换成自定义音效。",
+        "支持 DS1、DS1:R、DS2 和 DS3。"
+    ]
+}

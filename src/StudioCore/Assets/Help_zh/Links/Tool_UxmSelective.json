@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：UXM Selective Unpack",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/Nordgaren/UXM-Selective-Unpack@UXM Selective Unpack]",
+        "[Header]说明",
+        "通过解包游戏档案并把可执行文件打补丁改为读取散装文件，让 DS1、DS2、SotFS、DS3、只狼和艾尔登法环得以进行文件模改。"
+    ]
+}

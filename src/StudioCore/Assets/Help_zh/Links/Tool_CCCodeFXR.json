@@ -1,0 +1,25 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "工具：CCCode FXR",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]链接",
+        "[Link@https:/github.com/EvenTorset/fxr@CCCode FXR]",
+        "[Header]说明",
+        "一个用于创建和编辑 FXR 文件（粒子特效、灯光等）的 JavaScript 库，适用于黑暗之魂 3、只狼、艾尔登法环和装甲核心 6。它没有任何依赖，在浏览器和 Node 中都能运行。"
+    ]
+}

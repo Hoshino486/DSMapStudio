@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -174,14 +174,14 @@ public class TaskManager
             {
                 if (PassiveTask)
                 {
-                    TaskLogs.AddLog($"Running passive task: {TaskId}",
+                    TaskLogs.AddLog(Localization.Loc.T("Running passive task: {TaskId}", "TaskId", TaskId),
                         LogLevel.Information, LogPriority);
                 }
 
                 try
                 {
                     TaskAction.Invoke();
-                    TaskLogs.AddLog($"Task Completed: {TaskId}",
+                    TaskLogs.AddLog(Localization.Loc.T("Task Completed: {TaskId}", "TaskId", TaskId),
                         LogLevel.Information, LogPriority);
                 }
                 catch (Exception e)
@@ -192,7 +192,7 @@ public class TaskManager
                         {
                             e = e.InnerException;
                         }
-                        TaskLogs.AddLog($"Task Failed: {TaskId}",
+                        TaskLogs.AddLog(Localization.Loc.T("Task Failed: {TaskId}", "TaskId", TaskId),
                             LogLevel.Error, LogPriority, e);
                     }
                     else

@@ -1,0 +1,28 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "行操作",
+    "Tags": [
+        ""
+    ],
+    "Contents": [
+        "[Header]copy",
+        "将选中的行加入剪贴板。若剪贴板的 Param 不同，则先清空剪贴板。",
+        "[Header]copyN <value>",
+        "将选中的行按给定次数加入剪贴板。若剪贴板的 Param 不同，则先清空剪贴板。",
+        "[Header]paste",
+        "将选中的行加入主 regulation 或 parambnd 中选中的 Param。",
+        ""
+    ]
+}

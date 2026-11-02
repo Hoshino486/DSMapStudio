@@ -1,0 +1,28 @@
+{
+    "ProjectType": 0,
+    "HeaderColor": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+    ],
+    "HighlightColor": [
+        0.871,
+        0.843,
+        0.351,
+        1.0
+    ],
+    "Title": "参数编辑器：Param 升级",
+    "Tags": [
+        "Feature",
+        "Param"
+    ],
+    "Contents": [
+        "[Header]信息",
+        "升级 Param（Upgrade Params）功能允许你更新项目 regulation.bin 所使用的 regulation 版本。",
+        "要使用该功能，你需要拥有基础游戏 regulation.bin 的旧版本。",
+        "如果你的项目与最新的 regulation.bin 都添加了相同 ID 的行，该过程就会失败。",
+        "支持的游戏：",
+        "[Highlight@Elden Ring] "
+    ]
+}

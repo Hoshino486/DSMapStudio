@@ -329,7 +329,7 @@ public class SearchProperties
             _propertyNameSearchString = "";
         }
 
-        if (ImGui.Begin("Search Properties"))
+        if (ImGui.Begin("Search Properties###Search Properties"))
         {
         
             // propcache

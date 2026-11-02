@@ -1,4 +1,4 @@
-﻿using NativeFileDialogSharp;
+using NativeFileDialogSharp;
 using Silk.NET.SDL;
 using System;
 using System.Collections.Generic;
@@ -61,6 +61,11 @@ public abstract unsafe class PlatformUtils
     public DialogResult MessageBox(string text, string caption, MessageBoxButtons buttons,
         MessageBoxIcon icon = MessageBoxIcon.None)
     {
+        // Native message boxes bypass ImGui entirely, so they translate here rather than in the
+        // label hook. Both the body and the caption go through the shared table.
+        text = Localization.Loc.T(text);
+        caption = Localization.Loc.T(caption);
+
         var buttonNames = new string[3];
         var buttonResults = new DialogResult[3];
         int buttonCount;
@@ -70,35 +75,35 @@ public abstract unsafe class PlatformUtils
         {
             case MessageBoxButtons.OK:
                 buttonCount = 1;
-                buttonNames[0] = "Ok";
+                buttonNames[0] = Localization.Loc.T("Ok");
                 buttonResults[0] = DialogResult.OK;
                 returnID = 0;
                 break;
             case MessageBoxButtons.OKCancel:
                 buttonCount = 2;
-                buttonNames[1] = "Ok";
+                buttonNames[1] = Localization.Loc.T("Ok");
                 buttonResults[1] = DialogResult.OK;
-                buttonNames[0] = "Cancel";
+                buttonNames[0] = Localization.Loc.T("Cancel");
                 buttonResults[0] = DialogResult.Cancel;
                 returnID = 1;
                 escapeID = 0;
                 break;
             case MessageBoxButtons.YesNoCancel:
                 buttonCount = 3;
-                buttonNames[2] = "Yes";
+                buttonNames[2] = Localization.Loc.T("Yes");
                 buttonResults[2] = DialogResult.Yes;
-                buttonNames[1] = "No";
+                buttonNames[1] = Localization.Loc.T("No");
                 buttonResults[1] = DialogResult.No;
-                buttonNames[0] = "Cancel";
+                buttonNames[0] = Localization.Loc.T("Cancel");
                 buttonResults[0] = DialogResult.Cancel;
                 returnID = 2;
                 escapeID = 0;
                 break;
             case MessageBoxButtons.YesNo:
                 buttonCount = 2;
-                buttonNames[1] = "Yes";
+                buttonNames[1] = Localization.Loc.T("Yes");
                 buttonResults[1] = DialogResult.Yes;
-                buttonNames[0] = "No";
+                buttonNames[0] = Localization.Loc.T("No");
                 buttonResults[0] = DialogResult.No;
                 returnID = 1;
                 escapeID = 0;
