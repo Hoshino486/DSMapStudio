@@ -1,259 +1,265 @@
 
 # SoulsFormats
-A .NET library for reading and writing various FromSoftware file formats, targeting .NET Framework 4.6.2.  
-Dark Souls, Demon's Souls and Bloodborne are the main focus, but older From games may be supported to varying degrees. See below for a breakdown of each format.
 
-## Usage
-Objects for each format can be created with the static method Read, which accepts either a byte array or a file path. Using a path is preferable as it will be read with a stream, reducing memory consumption.
+> 本文为简体中文版，英文原文见 [README.en.md](README.en.md)。
+
+一个用于读写各种 FromSoftware 文件格式的 .NET 库，目标框架为 .NET Framework 4.6.2。
+重点覆盖《黑暗之魂》《恶魔之魂》与《血源诅咒》，较早的 From 作品可能获得不同程度支持。各格式的支持情况见下文。
+
+## 用法
+
+每种格式都可以通过静态方法 Read 创建对象，参数可以是字节数组或文件路径。推荐传路径，因为它会以流式读取，内存占用更低。
 ```cs
 BND3 bnd = BND3.Read(@"C:\your\path\here.chrbnd");
 
-// or
+// 或者
 
 byte[] bytes = File.ReadAllBytes(@"C:\your\path\here.chrbnd");
 BND3 bnd = BND3.Read(bytes);
 ```
 
-The Write method can be used to create a new file from an object. If given a path it will be written to that location with a stream, otherwise a byte array will be returned.
+Write 方法用于把对象写成新文件。传路径则以流式写入该位置，否则返回字节数组。
 ```cs
 bnd.Write(@"C:\your\path\here.chrbnd");
 
-// or
+// 或者
 
 byte[] bytes = bnd.Write();
 File.WriteAllBytes(@"C:\your\path\here.chrbnd", bytes);
 ```
 
-DCX (compressed files) will be decompressed automatically and the compression type will be remembered and reapplied when writing the file.
+DCX（压缩文件）会被自动解压，压缩类型会被记录，并在写回时原样重新施加。
 ```cs
 BND3 bnd = BND3.Read(@"C:\your\path\here.chrbnd.dcx");
 bnd.Write(@"C:\your\path\here.chrbnd.dcx");
 ```
 
-The compression type can be changed by either setting the Compression field of the object, or specifying one when calling Write.
+压缩类型可以通过设置对象的 Compression 字段更改，也可以在调用 Write 时指定。
 ```cs
 BND3 bnd = BND3.Read(@"C:\your\path\here.chrbnd.dcx");
 bnd.Write(@"C:\your\path\here.chrbnd", DCX.Type.None);
 
-// or
+// 或者
 
 BND3 bnd = BND3.Read(@"C:\your\path\here.chrbnd.dcx");
 bnd.Compression = DCX.Type.None;
 bnd.Write(@"C:\your\path\here.chrbnd");
 ```
 
-Finally, DCX files can be generically read and written with static methods if necessary. DCX holds no important metadata so they read/write directly to/from byte arrays instead of creating an object.
+最后，如有需要，DCX 文件也可以用静态方法直接读写。DCX 不携带重要元数据，因此直接以字节数组进出，而不创建对象。
 ```cs
 byte[] bndBytes = DCX.Decompress(@"C:\your\path\here.chrbnd.dcx");
 BND3 bnd = BND3.Read(bndBytes);
 
-// or
+// 或者
 
 byte[] dcxBytes = File.ReadAllBytes(@"C:\your\path\here.chrbnd.dcx");
 byte[] bndBytes = DCX.Decompress(dcxBytes);
 BND3 bnd = BND3.Read(bndBytes);
 ```
 
-Writing a new DCX requires a DCX.Type parameter indicating which game it is for. DCX.Decompress has an optional out parameter indicating the detected type which should usually be used instead of specifying your own.
+写入新的 DCX 需要传入 DCX.Type 参数以指明所属游戏。DCX.Decompress 有一个可选的 out 参数会回传识别出的类型，通常应当使用它，而不是自行指定。
 ```cs
 byte[] bndBytes = DCX.Decompress(@"C:\your\path\here.chrbnd.dcx", out DCX.Type type);
 DCX.Compress(bndBytes, type, @"C:\your\path\here.chrbnd.dcx");
 
-// or
+// 或者
 
 byte[] bndBytes = DCX.Decompress(@"C:\your\path\here.chrbnd.dcx", out DCX.Type type);
 byte[] dcxBytes = DCX.Compress(bndBytes, type);
 File.WriteAllBytes(@"C:\your\path\here.chrbnd.dcx", dcxBytes);
 ```
 
-## Formats
-Game compatibility will always be listed for DS 1/R/2/3, DeS, and BB unless the format is unused in that game. Other From games may or may not be supported.
+## 格式支持
+
+除非某格式在该游戏中根本未被使用，否则兼容性总会列出 DS 1/R/2/3、DeS 与 BB。其他 From 作品的支持情况不定。
 
 ### BND3
-A general-purpose file container used before DS2.  
-Extension: `.*bnd`
-* DS1: Full Read and Write
-* DSR: Full Read and Write
-* DeS: Partial Read and Write
-* NB: Full Read and Write
+DS2 之前使用的通用文件容器。
+扩展名：`.*bnd`
+* DS1：完整读写
+* DSR：完整读写
+* DeS：部分读写
+* NB：完整读写
 
 ### BND4
-A general-purpose file container used from DS2 onwards.  
-Extension: `.*bnd`
-* DS2: Full Read and Write
-* DS3: Full Read and Write
-* BB: Full Read and Write
+自 DS2 起使用的通用文件容器。
+扩展名：`.*bnd`
+* DS2：完整读写
+* DS3：完整读写
+* BB：完整读写
 
 ### BTAB
-Something to do with map part lighting/shadowing.  
-Extension: `*.btab`
-* DS3: Full Read and Write
-* BB: Full Read and Write
+与地图部件的照明/阴影相关。
+扩展名：`*.btab`
+* DS3：完整读写
+* BB：完整读写
 
 ### BTL
-Point light sources in maps.  
-Extension: `*.btl`
-* DS3: Full Read and Write
-* BB: Partial Read and Write
+地图中的点光源。
+扩展名：`*.btl`
+* DS3：完整读写
+* BB：部分读写
 
 ### BXF3
-Essentially a BND3 split into separate header and data files.  
-Extensions: `.*bhd` (header) and `.*bdt` (data)
-* DS1: Full Read and Write
-* DSR: Full Read and Write
+本质上是把一个 BND3 拆分为独立的头部与数据文件。
+扩展名：`.*bhd`（头部）与 `.*bdt`（数据）
+* DS1：完整读写
+* DSR：完整读写
 
 ### BXF4
-Essentially a BND4 split into separate header and data files.  
-Extensions: `.*bhd` (header) and `.*bdt` (data)
-* DS2: Full Read and Write
-* DS3: Full Read and Write
-* BB: Full Read and Write
+本质上是把一个 BND4 拆分为独立的头部与数据文件。
+扩展名：`.*bhd`（头部）与 `.*bdt`（数据）
+* DS2：完整读写
+* DS3：完整读写
+* BB：完整读写
 
 ### CCM
-A font layout file used in DeS, DS1, DS2, and DS3.  
-Extension: `.ccm`
-* DeS: Full Read and Write
-* DS1: Full Read and Write
-* DS2: Read Only
-* DS3: Read Only
+DeS、DS1、DS2 与 DS3 使用的字库布局文件。
+扩展名：`.ccm`
+* DeS：完整读写
+* DS1：完整读写
+* DS2：只读
+* DS3：只读
 
 ### DCX
-A wrapper for a single compressed file used in every game after NB.  
-Extension: `.dcx`
-* DS1: Full Read, Write, and Create
-* DSR: Full Read, Write, and Create
-* DS2: Full Read, Write, and Create
-* DS3: Full Read, Write, and Create
-* DeS: Full Read, Write, and Create
-* BB: Full Read, Write, and Create
+NB 之后所有游戏中用于包裹单个压缩文件的封装。
+扩展名：`.dcx`
+* DS1：完整读取、写入与创建
+* DSR：完整读取、写入与创建
+* DS2：完整读取、写入与创建
+* DS3：完整读取、写入与创建
+* DeS：完整读取、写入与创建
+* BB：完整读取、写入与创建
 
 ### DRB
-An interface element configuration file used before DS2 when Scaleform was adopted.  
-Extension: `.drb`
-* DS1: Full Read and Write
-* DSR: Full Read and Write
-* DeS: No support
-* NB: Untested
+DS2 之前、在引入 Scaleform 时使用的界面元素配置文件。
+扩展名：`.drb`
+* DS1：完整读写
+* DSR：完整读写
+* DeS：不支持
+* NB：未测试
 
 ### ENFL
-Unknown. Believed to determine which assets load based on where you are in a map.  
-Extension: `.entryfilelist`
-* DS3: Full Read and Write
-* BB: Untested
+未知。据信用于决定随玩家所处位置加载哪些资产。
+扩展名：`.entryfilelist`
+* DS3：完整读写
+* BB：未测试
 
 ### ESD
-Defines a set of state machines used to control characters, menus, dialog, and/or map events.  
-Extension: `.esd`  
-* DS1: Full Read, Write, and Create
-* DS2: Full Read, Write, and Create
-* DS3: Full Read, Write, and Create
-* DeS: No support
-* BB: Full Read, Write, and Create
+定义一组状态机，用于控制角色、菜单、对话与地图事件。
+扩展名：`.esd`
+* DS1：完整读取、写入与创建
+* DS2：完整读取、写入与创建
+* DS3：完整读取、写入与创建
+* DeS：不支持
+* BB：完整读取、写入与创建
 
 ### FLTPARAM
-A graphics configuration format used in DS2.  
-Extension: `.fltparam`
-* DS2: Partial Read and Write
+DS2 使用的图形配置格式。
+扩展名：`.fltparam`
+* DS2：部分读写
 
 ### FLVER
-A 3D model file used since DS1.  
-Extension: `.flv` or `.flver`
-* DS1: Full Read and Write
-* DSR: Full Read and Write
-* DS2: Full Read and Write
-* DS3: Full Read and Write
-* BB: Full Read and Write
+自 DS1 起使用的 3D 模型文件。
+扩展名：`.flv` 或 `.flver`
+* DS1：完整读写
+* DSR：完整读写
+* DS2：完整读写
+* DS3：完整读写
+* BB：完整读写
 
 ### FLVERD
-A 3D model file used before DS1.  
-Extension: `.flver`
-* DeS: Full Read, No Write
-* NB: Partial Read, No Write
+DS1 之前使用的 3D 模型文件。
+扩展名：`.flver`
+* DeS：可完整读取，不支持写入
+* NB：部分读取，不支持写入
 
 ### FMG
-A text bundle format used throughout the series.  
-Extension: `.fmg`
-* DS1: Full Read, Write, and Create
-* DS2: Full Read, Write, and Create
-* DS3: Full Read, Write, and Create
-* DeS: Full Read, Write, and Create
-* BB: Full Read, Write, and Create
+系列通用的文本包格式。
+扩展名：`.fmg`
+* DS1：完整读取、写入与创建
+* DS2：完整读取、写入与创建
+* DS3：完整读取、写入与创建
+* DeS：完整读取、写入与创建
+* BB：完整读取、写入与创建
 
 ### FXR
-A special effects format used in DS3.  
-Extension: `.fxr`
-* DS3: Read Only
+DS3 使用的特效格式。
+扩展名：`.fxr`
+* DS3：只读
 
 ### GPARAM
-A graphics configuration format used in DS3 and BB.  
-Extension: `.gparam`
-* DS3: Full Read and Write
-* BB: Untested
+DS3 与 BB 使用的图形配置格式。
+扩展名：`.gparam`
+* DS3：完整读写
+* BB：未测试
 
 ### LUAGNL
-A list of global variable names for Lua scripts.  
-Extension: `.luagnl`
-* DS1: Full Read, Write, and Create
-* BB: Full Read, Write, and Create
-* DS3: Full Read, Write, and Create
+Lua 脚本的全局变量名列表。
+扩展名：`.luagnl`
+* DS1：完整读取、写入与创建
+* BB：完整读取、写入与创建
+* DS3：完整读取、写入与创建
 
 ### LUAINFO
-Information about AI goals for Lua scripts.  
-Extension: `.luainfo`
-* DS1: Full Read, Write, and Create
-* BB: Full Read, Write, and Create
-* DS3: Full Read, Write, and Create
+Lua 脚本中 AI 目标的相关信息。
+扩展名：`.luainfo`
+* DS1：完整读取、写入与创建
+* BB：完整读取、写入与创建
+* DS3：完整读取、写入与创建
 
 ### MSB3
-A map definition format used in DS3.  
-Extension : `.msb`
-* DS3: Full Read and Write
+DS3 使用的地图定义格式。
+扩展名：`.msb`
+* DS3：完整读写
 
 ### MTD
-A material definition file used throughout the series.  
-Extension: `.mtd`
-* DS1: Full Read and Write
-* DSR: Full Read and Write
-* DS2: Full Read and Write
-* DS3: Full Read and Write
-* DeS: Full Read and Write
-* BB: Full Read and Write
-* NB: Full Read and Write
+系列通用的材质定义文件。
+扩展名：`.mtd`
+* DS1：完整读写
+* DSR：完整读写
+* DS2：完整读写
+* DS3：完整读写
+* DeS：完整读写
+* BB：完整读写
+* NB：完整读写
 
 ### NVM
-A navmesh format used in DeS and DS1.  
-Extension: `.nvm`  
-* DS1: Full Read and Write
-* DeS: Full Read and Write
+DeS 与 DS1 使用的导航网格格式。
+扩展名：`.nvm`
+* DS1：完整读写
+* DeS：完整读写
 
 ### PARAM64
-A general configuration file used in DS3.  
-Extension: `.param`
-* DS3: Full Read and Write
+DS3 使用的通用配置文件。
+扩展名：`.param`
+* DS3：完整读写
 
 ### PMDCL
-Defines static decals in maps in DS3.  
-Extension: `.pmdcl`
-* DS3: Full Read and Write
+定义 DS3 地图中的静态贴花。
+扩展名：`.pmdcl`
+* DS3：完整读写
 
 ### TAE3
-Controls when different events happen during animations; this specific version used in DS3.  
-Extension: `.tae`
-* DS3: Full Read and Write
+控制动画播放过程中各类事件的发生时机；此版本专用于 DS3。
+扩展名：`.tae`
+* DS3：完整读写
 
 ### TPF
-A container for multiple DDS textures used throughout the series.  
-Extension: `.tpf`
-* DS1: Full Read and Write
-* DSR: Full Read and Write
-* DS2: Full Read and Write
-* DS3: Full Read and Write
-* DeS: Full Read and Write
-* BB: Full Read and Write
-* NB: Full Read and Write
+系列通用的多 DDS 贴图容器。
+扩展名：`.tpf`
+* DS1：完整读写
+* DSR：完整读写
+* DS2：完整读写
+* DS3：完整读写
+* DeS：完整读写
+* BB：完整读写
+* NB：完整读写
 
-## Special Thanks
-To everyone below, for either creating tools that I learned from, or helping decipher these formats one way or another. Please yell at me on Discord if I missed you.
+## 特别感谢
+
+感谢下列各位：或是我从你们制作的工具中学到了东西，或是你们在破解这些格式时帮过忙。若遗漏了你，欢迎在 Discord 上找我。
 * albeartron
 * Atvaark
 * B3LYP
